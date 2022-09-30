@@ -1,17 +1,17 @@
+import React from "react";
+import Home from "./routes/Home";
+import  Market  from "./routes/Market";
+import {Routes,Route} from "react-router-dom";
 
-import { Navbar, Footer, Welcome, Transactions, Services } from "./components";
 
 const App = () => {
   return (
-    <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar />
-        <Welcome />
-      </div>
-      <Services />
-      <Transactions />
-      <Footer />
-    </div>
+   <>
+   <Routes>
+    <Route path="/" element={<Home />}/>
+    <Route path="/market" element={<Market />}/>
+    </Routes>
+    </>
   );
 }
 
